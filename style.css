@@ -18,7 +18,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .container {
@@ -249,8 +249,32 @@ footer h2 { color: var(--white); }
 }
 
 
+/* Section Title Divider */
+section h2 {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background-image: url("data:image/svg+xml,<svg width='120' height='25' viewBox='0 0 120 25' xmlns='http://www.w3.org/2000/svg'><defs><linearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'><stop offset='0%25' stop-color='%23e5e7eb'/><stop offset='100%25' stop-color='%239ca3af'/></linearGradient></defs><path d='M5 15 C 30 0 90 0 115 15' stroke='url(%23grad)' fill='none' stroke-width='4' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
     nav ul { display: none; } /* Basic responsive, needs hamburger */
     .menu-icon { display: block; }
+
+    .about-peptides-content {
+        grid-template-columns: 1fr;
+    }
 }
