@@ -236,6 +236,33 @@ nav a {
     margin-bottom: 2rem;
 }
 
+.pricing-box ul {
+    text-align: left;
+    margin: 1.5rem 0;
+}
+
+.pricing-box ul.checkmark-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-box ul.checkmark-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.pricing-box ul.checkmark-list .fa-check {
+    color: var(--heading-color);
+    margin-right: 0.75rem;
+    margin-top: 5px; /* Adjust for vertical alignment */
+}
+
+.pricing-box p:last-of-type {
+    margin-top: 1.5rem;
+}
+
 .benefit-card i {
     font-size: 2.5rem;
     color: var(--heading-color);
