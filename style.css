@@ -297,6 +297,7 @@ section h2::after {
 
     .about-peptides-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     nav ul.active {
