@@ -13,5 +13,6 @@ const menuIcon = document.querySelector('.menu-icon');
 const navUl = document.querySelector('nav ul');
 
 menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('active');
     navUl.classList.toggle('active');
 });
