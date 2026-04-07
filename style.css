@@ -3,18 +3,20 @@
     --text-color: #374151;
     --heading-color: #111827;
     --border-color: #e5e7eb;
-    --footer-bg: #111827;
-    --button-bg: #1f2937;
+    --footer-bg: #0f172a;
+    --button-bg: #000000;
     --button-text: #ffffff;
     --white: #fff;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --section-background-alt: #f9fafb;
-    --accent-green: #f0fdf4;
-    --accent-yellow: #fde047;
-    --accent-pink: #f9a8d4;
-    --accent-blue: #eff6ff;
-    --accent-purple: #c084fc;
-    --accent-teal: #f0fdfa;
+    --brand-green: #e6fffa;
+    --accent-1: #f5f3ff; /* Light Purple */
+    --accent-2: #f0fdf4; /* Light Green */
+    --accent-3: #fefce8; /* Light Yellow */
+    --accent-4: #fce7f3; /* Light Pink */
+    --accent-5: #e0f2fe; /* Light Blue */
+    --accent-6: #ecfeff; /* Light Teal/Cyan */
+    --brand-gradient: linear-gradient(90deg, var(--accent-3) 0%, var(--accent-6) 100%);
 }
 
 body {
@@ -112,7 +114,7 @@ nav a:hover::after {
 .hero h1 { font-size: 3.5rem; }
 .hero p { font-size: 1.125rem; margin-bottom: 2rem; }
 .cta-button {
-    background: linear-gradient(45deg, #2d3748, #1a202c);
+    background: var(--button-bg);
     color: var(--button-text);
     padding: 0.85rem 2.25rem;
     border-radius: 8px;
@@ -170,7 +172,7 @@ nav a:hover::after {
 }
 
 #vendors {
-    background-color: var(--section-background-green);
+    background-color: var(--brand-green);
 }
 
 .about-peptides-content {
@@ -202,7 +204,7 @@ nav a:hover::after {
     padding: 2rem;
     border: 1px solid var(--border-color);
     border-radius: 16px;
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -213,7 +215,7 @@ nav a:hover::after {
 
 /* Vendors Section */
 #vendors {
-    background-color: var(--accent-green);
+    background-color: var(--brand-green);
 }
 
 /* How It Works Section */
@@ -238,9 +240,9 @@ nav a:hover::after {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.how-it-works-card:nth-of-type(1) .number-circle { background-color: var(--accent-yellow); }
-.how-it-works-card:nth-of-type(2) .number-circle { background-color: var(--accent-pink); }
-.how-it-works-card:nth-of-type(3) .number-circle { background-color: var(--accent-purple); }
+.how-it-works-card:nth-of-type(1) .number-circle { background-color: var(--accent-1); }
+.how-it-works-card:nth-of-type(2) .number-circle { background-color: var(--accent-2); }
+.how-it-works-card:nth-of-type(3) .number-circle { background-color: var(--accent-3); }
 
 .number-circle {
     width: 50px;
@@ -310,10 +312,26 @@ nav a:hover::after {
     margin-top: 1.5rem;
 }
 
+.icon-background {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card:nth-of-type(1) .icon-background { background-color: var(--accent-1); }
+.benefit-card:nth-of-type(2) .icon-background { background-color: var(--accent-2); }
+.benefit-card:nth-of-type(3) .icon-background { background-color: var(--accent-3); }
+.benefit-card:nth-of-type(4) .icon-background { background-color: var(--accent-4); }
+.benefit-card:nth-of-type(5) .icon-background { background-color: var(--accent-5); }
+.benefit-card:nth-of-type(6) .icon-background { background-color: var(--accent-6); }
+
 .benefit-card i {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--heading-color);
-    margin-bottom: 1rem;
 }
 
 .benefit-card h3 {
@@ -433,7 +451,7 @@ section h2::after {
 #online-sellers {
     padding: 50px 0;
     text-align: center;
-    background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-pink) 100%);
+    background: var(--brand-gradient);
 }
 
 #online-sellers .container {
